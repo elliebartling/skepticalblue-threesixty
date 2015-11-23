@@ -1939,8 +1939,8 @@ h2.entry-title a:hover, h2.entry-title a:active {
 
 body.home .has-post-thumbnail,
 body.archive .has-post-thumbnail,
-body.home .has-post-thumbnail a span,
-body.archive .has-post-thumbnail a span,
+body.home .has-post-thumbnail a,
+body.archive .has-post-thumbnail a,
 body.home .has-post-thumbnail a .entry-author-name,
 body.archive .has-post-thumbnail a .entry-author-name {
   background-size: cover !important;
