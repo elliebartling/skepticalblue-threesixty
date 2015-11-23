@@ -2,8 +2,6 @@
 //* this will bring in the Genesis Parent files needed:
 include_once( get_template_directory() . '/lib/init.php' );
 
-require_once('wp-updates-theme.php');
-new WPUpdatesThemeUpdater_1715( 'http://wp-updates.com/api/2/theme', basename( get_template_directory() ) );
 
 //* We tell the name of our child theme
 define( 'SkepticalBlue', __( 'Genesis Child', 'genesischild' ) );
