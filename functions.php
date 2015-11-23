@@ -4,7 +4,7 @@ include_once( get_template_directory() . '/lib/init.php' );
 
 
 //* We tell the name of our child theme
-define( 'SkepticalBlue', __( 'Genesis Child', 'genesischild' ) );
+define( 'SkepticalBlueThreeSixty', __( 'Genesis Child', 'genesischild' ) );
 //* We tell the web address of our child theme (More info & demo)
 define( 'Child_Theme_Url', 'http://gsquaredstudios.com' );
 //* We tell the version of our child theme
@@ -319,21 +319,21 @@ function sb_add_feat_image($attributes, $context) {
 // 	}
 // }
 
-add_action('genesis_before_loop', 'sb_add_recent_posts');
-function sb_add_recent_posts() {
-	if( is_home() ) {
-		echo '<div id="recent-posts-header">
-					<h1 class="content-header">Recent Posts</h1>
-					<div class="content-subhead">
-						<p class="content-desc">Our latest and greatest original posts.</p>
-						<a href="/blog"><p class="content-all">View All</p></a>
-					</div>
-				  </div>';
-		}
-}
+// add_action('genesis_before_loop', 'sb_add_recent_posts');
+// function sb_add_recent_posts() {
+// 	if( is_home() ) {
+// 		echo '<div id="recent-posts-header">
+// 					<h1 class="content-header">Recent Posts</h1>
+// 					<div class="content-subhead">
+// 						<p class="content-desc">Our latest and greatest original posts.</p>
+// 						<a href="/blog"><p class="content-all">View All</p></a>
+// 					</div>
+// 				  </div>';
+// 		}
+// }
 
 
-
+//* A test comment
 
 //* Customize the post meta function
 add_filter( 'genesis_post_meta', 'sp_post_meta_filter' );
@@ -425,66 +425,66 @@ function child_get_email_sidebar() {
 
 
 
-// Register a new sidebar
-genesis_register_sidebar( array(
-	'id' => 'threesixty-sidebar',
-	'name' => 'ThreeSixty Sidebar',
-	'description' => 'This is the blog sidebar widget area.'
-	));
+// // Register a new sidebar
+// genesis_register_sidebar( array(
+// 	'id' => 'threesixty-sidebar',
+// 	'name' => 'ThreeSixty Sidebar',
+// 	'description' => 'This is the blog sidebar widget area.'
+// 	));
 
 
-add_action( 'get_header', 'threesixty_sidebar_logic' );
-/**
- * Add Home Sidebar
- * 
- * @author Brian Lis
- * @link http://dev.studiopress.com/add-unique-sidebar-to-home-page.htm
- */
-function threesixty_sidebar_logic() {
+// add_action( 'get_header', 'threesixty_sidebar_logic' );
+// /**
+//  * Add Home Sidebar
+//  * 
+//  * @author Brian Lis
+//  * @link http://dev.studiopress.com/add-unique-sidebar-to-home-page.htm
+//  */
+// function threesixty_sidebar_logic() {
     
-        remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
-        add_action( 'genesis_after_content', 'child_get_threesixty_sidebar' );
+//         remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
+//         add_action( 'genesis_after_content', 'child_get_threesixty_sidebar' );
     
-}
+// }
 
-/**
- * Retrieve our unique home page sidebar.
- */
-function child_get_threesixty_sidebar() {
-	if (is_home()) {
-    	get_sidebar( 'threesixty' );
-	}
-}
-
-
+// /**
+//  * Retrieve our unique home page sidebar.
+//  */
+// function child_get_threesixty_sidebar() {
+// 	if (is_home()) {
+//     	get_sidebar( 'threesixty' );
+// 	}
+// }
 
 
-/**
- * Register a new sidebar for Swag Area
- */
-genesis_register_sidebar( array(
-	'id' => 'swag-sidebar',
-	'name' => 'Swag Sidebar',
-	'description' => 'This is the Swag sidebar widget area.'
-	));
 
 
-add_action( 'get_header', 'swag_sidebar_logic' );
-function swag_sidebar_logic() {
+// /**
+//  * Register a new sidebar for Swag Area
+//  */
+// genesis_register_sidebar( array(
+// 	'id' => 'swag-sidebar',
+// 	'name' => 'Swag Sidebar',
+// 	'description' => 'This is the Swag sidebar widget area.'
+// 	));
+
+
+// add_action( 'get_header', 'swag_sidebar_logic' );
+// function swag_sidebar_logic() {
     
-        remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
-        add_action( 'genesis_after_content', 'child_get_swag_sidebar' );
+//         remove_action( 'genesis_after_content', 'genesis_get_sidebar' );
+//         add_action( 'genesis_after_content', 'child_get_swag_sidebar' );
     
-}
+// }
 
-/**
- * Retrieve our unique home page sidebar.
- */
-function child_get_swag_sidebar() {
-	if (is_home()){
-    	get_sidebar( 'swag' );
-    }
-}
+// /**
+//  * Retrieve our unique home page sidebar.
+//  */
+// function child_get_swag_sidebar() {
+// 	if (is_home()){
+//     	get_sidebar( 'swag' );
+//     }
+// }
 
 
 //* Display author box on single posts
