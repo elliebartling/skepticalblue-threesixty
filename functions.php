@@ -544,7 +544,7 @@ function contributors() {
 			echo userphoto($author);
 		}
 		elseif (validate_gravatar($author->user_email)) {
-			echo get_avatar($author->ID, 300, 'blank');
+			echo get_avatar($author->ID, 200, 'blank');
 		}
 		
 		echo "</a>";
@@ -878,7 +878,7 @@ function sb_alt_author_box() {
 				if(userphoto_exists($user))
 				    userphoto($user, '', '', $attributes );
 				else
-				    echo get_avatar($user, 300);
+				    echo get_avatar($user, 200);
 				?></div>
 			<div class="about-author">
 				<h4><?php echo get_the_author(); ?></h4>
