@@ -858,7 +858,7 @@ function validate_gravatar_alt($email) {
 function sb_alt_author_box() {
 	$user = get_the_author_id();
 	$email = get_the_author_meta($user_email, $user);
-	$attributes = array('class' => 'avatar-400');
+	$attributes = array('class' => 'avatar-400', 'width' => '200');
 
  ?>
 	<div id="author-box-wrapper">
@@ -867,7 +867,7 @@ function sb_alt_author_box() {
 				if(userphoto_exists($user))
 				    userphoto($user, '', '', $attributes );
 				else
-				    echo get_avatar($user, 200);
+				    echo get_avatar($user, 300);
 				?></div>
 			<div class="about-author">
 				<h4><?php echo get_the_author(); ?></h4>
