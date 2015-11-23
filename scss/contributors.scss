@@ -110,7 +110,7 @@ body.page-template-contributors-template .content .entry-content {
 }
 
 .editor-university a {
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	/*text-transform: uppercase;*/
 	/*font-style: italic;*/
 	font-weight: lighter;
@@ -176,7 +176,7 @@ ul.social-links li {
 }
 
 #contributors-box li h5 {
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	/*text-transform: uppercase;*/
 	/*font-style: italic;*/
 	/*font-weight: bold;*/
@@ -236,7 +236,7 @@ ul.social-links li {
 }
 
 #specialthanks-box li h5 {
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	text-transform: uppercase;
 	font-style: italic;
 	font-weight: bold;

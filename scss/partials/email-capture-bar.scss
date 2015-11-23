@@ -26,17 +26,18 @@
 	display: none;
 }
 
-#email-capture form input[type="text"] {
+#email-capture form p input[name="email"] {
 	background-color: white !important;
 	border-radius: 2px !important;
 	border-color: transparent !important;
 	height: 55px !important;
+	font-family: $avenir-light;
 }
 
 #email-capture form input::-moz-placeholder {
 	color: #999;
 	font-style: italic;
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	font-weight: 200;
 	opacity: 1;
 }
@@ -44,7 +45,7 @@
 #email-capture form input::-webkit-input-placeholder {
 	color: #999;
 	font-style: italic;
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	font-weight: 200;
 }
 
@@ -52,18 +53,24 @@
 #email-capture form input[type="submit"] {
 	background-color: $orange;
 	border-radius: 2px;
-	font-family: Avenir Next;
+	font-family: $avenir-light;
 	font-weight: 400;
 	text-transform: none;
 }
 
 @media (min-width: 700px) {
 	#email-capture form {
-		display: flex;
+		/*display: flex;*/
 		width: 100%;
 		flex-flow: row wrap;
 		justify-content: center;
 		margin: auto;
+	}
+
+	#email-capture .widget-wrap {
+		max-width: 800px !important;
+		margin: auto;
+		margin-bottom: 40px;
 	}
 
 	#email-capture form input[type="text"] {

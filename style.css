@@ -271,7 +271,7 @@ body > div {
 body {
   background-color: #f5f5f5;
   color: #333;
-  font-family: Avenir Next, sans-serif;
+  font-family: "Avenir Next Cyr W00 Regular", sans-serif;
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: 300;
@@ -1698,7 +1698,7 @@ li.menu-item:hover {
 .site-container .genesis-nav-menu {
   clear: both;
   color: #fff;
-  font-family: Avenir Next, sans-serif;
+  font-family: "Avenir Next Cyr W00 Regular", sans-serif;
   letter-spacing: 1px;
   letter-spacing: 0.1rem;
   line-height: 1.5;
@@ -2079,39 +2079,45 @@ body.single .userContent {
 #email-capture label {
   display: none; }
 
-#email-capture form input[type="text"] {
+#email-capture form p input[name="email"] {
   background-color: white !important;
   border-radius: 2px !important;
   border-color: transparent !important;
-  height: 55px !important; }
+  height: 55px !important;
+  font-family: "Avenir Next Cyr W00 Regular"; }
 
 #email-capture form input::-moz-placeholder {
   color: #999;
   font-style: italic;
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   font-weight: 200;
   opacity: 1; }
 
 #email-capture form input::-webkit-input-placeholder {
   color: #999;
   font-style: italic;
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   font-weight: 200; }
 
 #email-capture form input[type="submit"] {
   background-color: #F1A069;
   border-radius: 2px;
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   font-weight: 400;
   text-transform: none; }
 
 @media (min-width: 700px) {
   #email-capture form {
-    display: flex;
+    /*display: flex;*/
     width: 100%;
     flex-flow: row wrap;
     justify-content: center;
     margin: auto; }
+
+  #email-capture .widget-wrap {
+    max-width: 800px !important;
+    margin: auto;
+    margin-bottom: 40px; }
 
   #email-capture form input[type="text"] {
     display: inline-block;
@@ -2282,7 +2288,7 @@ p.content-all {
   text-align: left; }
 
 #swag-container .wp_rss_retriever_item_wrapper .wp_rss_retriever_container a {
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   text-transform: none;
   margin-top: 20px; }
 
@@ -2332,7 +2338,7 @@ body.archive #author-box-wrapper {
   font-size: 36px; }
 
 .about-author h5 {
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   font-weight: normal;
   font-size: 14px;
   color: #9B9B9B;
@@ -2537,7 +2543,7 @@ div.content {
   margin-bottom: 20px; }
 
 body#cards {
-  font-family: Avenir Next !important; }
+  font-family: "Avenir Next Cyr W00 Regular" !important; }
 
 .card.article {
   background-color: red !important; }
@@ -2719,7 +2725,7 @@ body.page-template-contributors-template .content .entry-content {
   vertical-align: top; }
 
 .editor-university a {
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   /*text-transform: uppercase;*/
   /*font-style: italic;*/
   font-weight: lighter;
@@ -2772,7 +2778,7 @@ ul.social-links li {
   margin: 20px 20px; }
 
 #contributors-box li h5 {
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   /*text-transform: uppercase;*/
   /*font-style: italic;*/
   /*font-weight: bold;*/
@@ -2822,7 +2828,7 @@ ul.social-links li {
   vertical-align: top; }
 
 #specialthanks-box li h5 {
-  font-family: Avenir Next;
+  font-family: "Avenir Next Cyr W00 Regular";
   text-transform: uppercase;
   font-style: italic;
   font-weight: bold;
