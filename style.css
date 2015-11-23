@@ -1944,7 +1944,7 @@ body.archive .has-post-thumbnail a span {
   background-size: cover !important;
   background-position: 50% 50% !important;
   /*background-color: rgba(0,0,0,.8) !important;*/
-  color: #FFF;
+  color: #FFF !important;
   overflow: hidden; }
 
 .entry-wrap-div {
