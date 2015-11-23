@@ -1,0 +1,33 @@
+body.single-post {
+	background-color: #FFF;
+}
+
+body.single-post .content {
+	background-color: #FFF;
+	display: block;
+	margin: auto;
+	max-width: 760px;
+}
+
+body.single-post article {
+	/*max-width: 760px;*/
+	display: block;
+	margin: auto;
+
+}
+
+body.single-post article .entry-title {
+	text-transform: uppercase;
+}
+
+body.single-post article .entry-content {
+	line-height: 1.8;
+	font-weight: normal;
+	color: $dark-gray;
+}
+
+body.single-post article .share-before {
+	display: block;
+	text-align: center;
+}
+

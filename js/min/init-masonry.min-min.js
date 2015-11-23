@@ -1,0 +1,1 @@
+jQuery(document).ready(function(){jQuery("#container").masonry({itemSelector:".brick",transitionDuration:"0.8s"})}),jQuery("#container").ready(function(){jQuery("#container").masonry("reload")}),jQuery(document).ready(function(){jQuery(".wp_rss_retriever_list").masonry({itemSelector:".wp_rss_retriever_item",transitionDuration:"0.8s",gutter:20})});

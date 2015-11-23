@@ -1,0 +1,21 @@
+.archive-description {
+	background-color: $super-light-gray;
+	padding:40px 0 20px;
+}
+
+h1.archive-title {
+	font-family: $utopia;
+	font-size: 50px;
+}
+
+body.tag #author-box-wrapper {
+	display: none !important;
+}
+
+body.tag .content {
+	padding-top: 40px;
+}
+
+body.archive.author article:first-of-type {
+	display: block;
+}

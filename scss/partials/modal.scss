@@ -1,0 +1,103 @@
+body.modal-open .site-container, body.modal-open #header  {
+    -webkit-filter: blur(7px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+  
+.modal-backdrop {background: #f7f7f7;}
+
+/****** Modal Styles ********/
+
+#SupportUs .modal-content {
+	background-image: url("img/modal-bg.png");
+	background-size: contain;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	border: none;
+	box-shadow: 4px 4px 0px #C4C4C4;
+}
+
+.modal-header, .modal-body, .modal-footer {
+	border: none !important;
+}
+
+.modal-header, .modal-footer {
+	padding: 50px 50px 0 !important;
+}
+
+.modal-header h4 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 1.1;
+	margin-top: 20px;
+}
+
+.modal-header p {
+	margin-top: 20px;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.modal-header button {
+	background-color: transparent;
+	color: #9B9B9B !important;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+.modal-body {
+	text-align: center;
+}
+
+.donation-button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background-color: transparent;
+	border: 1px solid #EDEDEE;
+	border-radius: 4px;
+	font-size: 12px;
+	font-weight: 900;
+	font-family: Open Sans;
+	padding: 15px;
+	width: 270px;
+}
+
+.donation-button img {
+	max-height: 24px;
+	vertical-align: middle; 
+	margin-left: 10px;
+}
+
+#paypal {
+	color: #4A4A4A;
+	&:hover {
+		background-color: darken(#FFF, 5%);
+	}
+}
+
+#coinbase {
+	border-color: transparent;
+	background-color: #1D90CB;
+	&:hover {
+		background-color: lighten(#1D90CB, 10%);
+	}
+}
+
+#swag-store {
+	font-family: 'TradeGothicW01-BoldCn20_675334';
+	font-size: 16px;
+	background-color: #000455;
+	border-color:transparent;
+	&:hover {
+		background-color: #F1A069;
+	}
+}
+
+

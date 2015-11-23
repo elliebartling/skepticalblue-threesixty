@@ -1,0 +1,116 @@
+
+/* Standard Navigation
+--------------------------------------------- */
+
+nav {
+	clear: both;
+	width: 320px;
+}
+
+
+
+
+/* Mobile Navigation */
+ .site-container .nav-primary {
+ display: none;
+ }
+ .mm-page #header {
+ 	/*display: block;*/
+ 	position: fixed;
+	top: 0;
+	z-index: 2001;
+	border-color: #000455 !important;
+ }
+
+ #menu, #menu a, #menu a:visited {
+ 	border-color: #000455 !important;
+ }
+
+ .mm-page #header a {
+ display: block;
+ height: 64px;
+ text-align: center;
+ width: 64px;
+ }
+
+ .mm-page #header a i {
+ font-size: 20px;
+ line-height: 64px;
+ width: 63px;
+ }
+
+ html.mm-opened {
+ 	margin-top: 0px !important;
+ }
+
+ html.mm-opened .mm-slideout .site-inner {
+ 	margin-top: 0px !important;
+ }
+
+ .mm-slideout {
+ 	position: absolute;
+ 	top: 0;
+ }
+ 
+ nav.mm-menu {
+ 	background-color: #000455;
+ 	padding-top: 40px;
+ }
+
+ #header {
+ 	padding: 10px 10px;
+ }
+
+ a.mm-title {
+ 	display: none;
+ }
+
+ #mm-menu-main-menu a {
+ 	display: block;
+ }
+
+ ul.menu {
+ 	list-style-type: none;
+ 	padding-top: 60px;
+ }
+
+ li.menu-item {
+ 	font-size: 21px;
+ 	font-weight: normal;
+ 	color: #FFF;
+ 	display: block;
+ 	text-align: center;
+ 	width: 100%;
+ 	margin-top: 25px;
+ }
+
+ li.menu-item:hover {
+ 	text-decoration: none;
+ }
+
+#header i:before {
+	font-family: FontAwesome;
+	content: "\f0c9";
+	color: #FFF;
+	font-size: 40px;
+	font-style: normal;
+}
+
+.site-container .genesis-nav-menu {
+ clear: both;
+ color: #fff;
+ font-family: Avenir Next, sans-serif;
+ letter-spacing: 1px;
+ letter-spacing: 0.1rem;
+ line-height: 1.5;
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+.site-container .genesis-nav-menu .menu-item {
+ display: inline-block;
+ margin: 0;
+ padding: 0;
+ text-align: left;
+ float: left;
+}

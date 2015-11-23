@@ -1,0 +1,132 @@
+
+/* Variables */
+
+#ajax-load-more {
+	order:3;
+}
+
+.alm-listing.alm-ajax {
+	width: 100% !important;
+}
+
+
+.site-inner {
+	padding: 80px 0px 0 0;
+	max-height:100%;
+}
+
+#container {
+	/*height: auto !important;*/
+	/*min-height: 1000px;*/
+}
+
+body {
+	background-color: $super-light-gray;
+}
+
+main.content {
+	width: 100%;
+	max-width: 100%;
+	min-height: 100% !important;
+	height: 100%;
+	display: block;
+	z-index: 0;
+}
+
+
+/* ThreeSixty Styles */
+
+li.wp_rss_retriever_item {
+	min-width: 284px;
+}
+
+@media only screen and (max-width: 1200px) {
+	
+}
+
+@media only screen and (max-width: 1000px) {
+	li.wp_rss_retriever_item {
+		width: 48% !important;
+	}
+
+	li.wp_rss_retriever_item:nth-of-type(9) {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 700px) {
+	li.wp_rss_retriever_item {
+		width: 100% !important;
+	}
+
+	li.wp_rss_retriever_item:nth-of-type(9),
+	li.wp_rss_retriever_item:nth-of-type(8),
+	li.wp_rss_retriever_item:nth-of-type(7),
+	li.wp_rss_retriever_item:nth-of-type(6),
+	li.wp_rss_retriever_item:nth-of-type(5) {
+		display: none;
+	}
+}
+
+
+/* Blogroll */
+
+@media only screen and (max-width: 800px) {
+	article:nth-of-type(2),
+	article:nth-of-type(3),
+	article:nth-of-type(4),
+	article:nth-of-type(5) {
+		margin: 20px 0px !important;
+	}
+
+	
+	article:nth-of-type(6),
+	article:nth-of-type(7) {
+		display: none;
+	}
+}
+
+
+/* Swag Box */
+
+@media only screen and (max-width: 800px) {
+	#sidebar-swag .wp_rss_retriever_item:nth-of-type(3){
+		display: none;
+	}
+
+	/*#sidebar-swag .wp_rss_retriever_item {
+		margin-bottom: 40px !important;
+	}*/
+}	
+
+
+/* Author Archive Page */
+
+
+@media only screen and (max-width: 1400px) {
+	body.archive article.brick,
+	body.page-template-blog article.brick {
+		width: 46% !important;
+	}
+}
+
+@media only screen and (max-width: 1120px) {
+	body.archive article.brick,
+	body.page-template-blog article.brick {
+		width: 45% !important;
+	}
+}
+
+
+@media only screen and (max-width: 900px) {
+	body.archive article.brick,
+	body.page-template-blog article.brick {
+		width: 100% !important;
+		margin: auto !important;
+		margin-bottom: 20px !important;
+	}
+}
+
+
+
+

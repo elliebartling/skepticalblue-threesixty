@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$("#sidebar-ThreeSixty-blog br").each(function(){"P"!=this.parentNode.nodeName&&($.each([this.previousSibling,this.nextSibling],function(){3===this.nodeType&&$(this).wrap("<p></p>")}),$(this).remove())})});

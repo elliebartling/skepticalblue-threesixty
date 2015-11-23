@@ -1,0 +1,15 @@
+.pagination {
+	text-align: center;
+}
+
+.pagination li a {
+	background-color: $sea-blue;
+	border-radius: 2px;
+	&:hover {
+		background-color:$dark-blue;
+	}
+}
+
+.pagination li.active a {
+	background-color: $dark-blue;
+}

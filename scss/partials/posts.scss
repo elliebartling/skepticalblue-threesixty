@@ -1,0 +1,208 @@
+
+
+/******** Content Headers ********/
+
+.content-header {
+	font-family: $utopia-headline;
+	font-size: 48px;
+}
+
+.content-subhead {
+	width:100%;
+}
+
+.content-subhead p {
+	display: inline;
+}
+
+.content-subhead p:first-child {
+	float: left;
+}
+
+.content-subhead a:hover {
+	color: #F1A069;
+}
+
+/******** Post Image ********/
+
+.content article {
+	overflow: hidden;
+}
+
+body.archive .content article a img {
+	width: 100% !important;
+	position: relative;
+	/*margin-top: -40%;*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*z-index: -999999;*/
+}
+
+.content article header h2 {
+	z-index: 1 !important;
+}
+
+
+/******** Article Teaser Styles ********/
+
+.content article {
+	padding: 0 !important;
+}
+
+.content article .entry-header {
+	padding: 50px 60px 0px;
+}
+
+.content article .entry-content, {
+	padding: 10px 60px 0px;
+
+}
+
+body.home .content article .entry-content,
+body.archive .content article .entry-content,
+body.blog .content article .entry-content, {
+	padding: 10px 60px 0px;
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.content article .entry-footer {
+	padding: 0px 60px 60px;
+}
+
+.content article .entry-header img {
+	width: 100%;
+}
+
+.content article .entry-content h2,
+.content article .entry-content h1 {
+	font-size: 32px;
+	line-height: 1.1;
+	display: block;
+	width: 100%;
+	order:0;
+}
+
+.content article .entry-content p {
+	display: block;
+	width: 100%;
+	order:2;
+}
+
+.content article .entry-content p.entry-meta {
+	display: block;
+	width: 100%;
+	order:1;
+}
+
+.content article .entry-content p.entry-meta, .content article .entry-content p.entry-meta a {
+	text-transform: uppercase;
+	font-weight: light;
+	font-style: italic;
+	color: $medium-gray;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+.content article .entry-content p.entry-meta, 
+.content article .entry-content p.entry-meta a,
+article p.entry-meta {
+	text-transform: uppercase;
+	/*color: $white !important;*/
+	margin-bottom: 20px;
+}
+
+article.has-post-thumbnail.gs-featured-content-entry span.entry-author-name {
+	font-weight: light !important;
+}
+
+h2.entry-title a:hover, h2.entry-title a:active {
+	color: $sea-blue;
+}
+
+.more-link {
+	display: inline;
+}
+
+body.home .has-post-thumbnail,
+body.archive .has-post-thumbnail,
+body.home .has-post-thumbnail a span,
+body.archive .has-post-thumbnail a span {
+	background-size: cover !important;
+	background-position: 50% 50% !important;
+	/*background-color: rgba(0,0,0,.8) !important;*/
+	color: $white;
+	overflow: hidden;
+}
+
+.entry-wrap-div {
+  content: " ";
+  /*display: block;*/
+  background-size: cover !important;
+  background-position: 30% 20%;
+  width: 100%;
+  /*height: 600px;*/
+  background: inherit;
+  background-attachment: fixed;
+  -webkit-filter: blur(12px);
+  filter: blur(12px);
+}
+
+
+.has-post-thumbnail h2 a {
+	color: $white ;
+}
+
+.has-post-thumbnail a img {
+	height: 100%;
+}
+
+/******** Post Meta Information ********/
+
+$meta-background-color: #0AD6EF;
+
+span.entry-tags a {
+	background-color: $meta-background-color;
+	padding: 5px 15px;
+	color: #FFF;
+	font-weight: normal;
+	display: inline-block;
+	margin-top: 10px;
+}
+
+span.entry-tags a:hover {
+	background-color: darken($meta-background-color, 10%);
+}
+
+p.entry-meta {
+	border-top-color: transparent !important;
+}
+
+.more-link {
+	color: $sea-blue;
+	font-weight: normal;
+	font-style: italic;
+	text-align: right;
+	font-size: 16px;
+	display: block;
+	width: 100%;
+}
+
+article.teaser footer.entry-footer {
+	display: none;
+}
+
+
+/* Single Post Styles */
+
+body.single h1.entry-title {
+	order: 0;
+}
+
+body.single p.entry-meta {
+	order:1;
+}
+
+body.single .userContent {
+	order: 2;
+}

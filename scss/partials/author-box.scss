@@ -1,0 +1,185 @@
+/* Layout */
+
+.about-author {
+	display: block;
+}
+
+/* Author Box */
+#author-box-wrapper {
+	background-color: $super-light-gray;
+	max-width: 900px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+body.archive #author-box-wrapper {
+	width: 900px;
+}
+
+.author-box {
+background-color: $super-light-gray;
+margin-bottom: 0px;
+}
+
+.author-box-img {
+	border-radius: 500px;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	border: #FFFFFF 4px;
+	padding: 0 0;
+	margin: 40px;
+	float: left;
+}
+
+.author-box img {
+	display: block;
+	max-width: none;
+	padding: 0 0 !important;
+	top: 0;
+	left:0;
+}
+
+/* Fonts & Styling */
+
+.about-author {
+	margin: 20px;
+	padding-top: 20px;
+	display: block;
+}
+
+.about-author h4, .about-author h1 {
+	font-family: $utopia;
+	font-size: 36px;
+}
+
+.about-author h5 {
+	font-family: Avenir Next;
+	font-weight: normal;
+	font-size: 14px;
+	color: $medium-gray;
+	text-transform: uppercase;
+	word-wrap: break-word;
+}
+
+.about-author p {
+	display: block;
+}
+
+.author-box .author-box-title {
+	font-family: $utopia;
+	font-size: 48px;
+}
+
+/* Contact Links */
+
+ul.social-links {
+	margin: auto;
+}
+
+.contact-links li {
+	display: inline;
+}
+
+.contact-links a {
+
+	color: $light-blue;
+	padding: 5px 5px;
+	font-weight: normal;
+	text-align: center;
+	margin: 0px 5px;
+	display: inline-block;
+	overflow: hidden;
+}
+
+.contact-links a:hover {
+	color: $orange;
+}
+
+
+/*
+Single posts!
+*/
+
+body.single #author-box-wrapper {
+	display: block;
+	order:2;
+	max-width: 100%;
+	width: 100%;
+	background-color: $super-light-gray;
+}
+
+body.single #author-box-wrapper .author-box {
+	max-width: 800px;
+	margin: auto;
+	background-color: $super-light-gray;
+}
+
+/*body.single #author-box-wrapper .author-box .contact-links {
+	display: flex;
+	flow: row wrap;
+}*/
+
+body.single #author-box-wrapper ul.social-links {
+	display: block;
+	width: 100%;
+	order:0;
+}
+
+body.single #author-box-wrapper a#view-all-posts {
+	display: block;
+	width: 100%;
+	order: 2;
+	padding:10px 20px;
+	background-color: $sea-blue;
+	color: $white;
+	border-radius: 2px;
+	&:hover {
+		background-color: $orange;
+	}
+}
+
+
+
+
+
+/* Mobile Version */
+
+@media only screen and (max-width: 700px) {
+	#author-box-wrapper {
+		text-align: center;
+	}
+	.author-box-img {
+		display: block;
+		float: none;
+		margin: auto;
+		margin-top: 40px;
+		margin-bottom: 20px;
+	}
+	.about-author {
+		display: block;
+	}
+
+  .archive-description,
+  .author-box,
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-pings {
+     padding: 5%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

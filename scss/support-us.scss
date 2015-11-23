@@ -1,0 +1,49 @@
+body.page .entry-content {
+	display: flex;
+	width: 900px;
+	margin: auto;
+}
+
+body.page .entry-content h1:first-of-type {
+	order: 0;
+	text-align: center;
+	margin: auto;
+}
+
+body.page .entry-content p:first-of-type {
+	order:1;
+	margin: auto;
+	margin-bottom: 40px;
+}
+
+body.page .entry-content button {
+	order: 2;
+}
+
+#amazon {
+	background-color: $white;
+	color: $dark-gray;
+	&:hover {
+		background-color: $light-gray;
+	}
+}
+
+/* Needs Responsive Styling */
+
+
+button#support-us-button {
+	background-color: $sea-blue;
+	color: #FFF !important;
+	&:hover {
+		color: $white;
+	}
+}
+
+button#support-us-button span {
+	margin: auto !important;
+	color: $white;
+	&:hover {
+		color: $white !important;
+	}
+
+}

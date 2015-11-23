@@ -1,0 +1,81 @@
+
+
+/* Trying this a different way */
+
+
+.content article.feature {
+	display: none;
+}
+
+.featured-content {
+	padding: 0 !important;
+}
+
+/* Styling the Sidebar */
+
+#sidebar-featured-post,
+.widget.featured-content.featuredpost {
+	width: 100%;
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article {
+	background-color: transparent;
+	overflow: hidden;
+	height:600px;
+	width: 100% !important;
+	background-color: $sea-blue;
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article img {
+	width:100%;
+	margin-top:-40%;
+	opacity: .3;
+	-webkit-filter: blur(5px) grayscale(100%);
+  	filter: blur(5px) grayscale(100%);
+
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article .entry-header {
+	color: #FFF;
+	position: relative;
+	top: calc(600px - 30%);
+	left:5%;
+	max-width: 768px;
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article .entry-header h2 a {
+	color: #FFF;
+	font-size: 40px;
+	&:hover {
+		color: $sea-blue;
+	}
+}
+
+
+#sidebar-featured-post .featured-content .widget-wrap article .entry-content {
+	color: #FFF;
+	position: absolute;
+	top:350px;
+	left:5%;
+	max-width: 768px;
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article .entry-content p, {
+	color: #FFF;
+}
+
+#sidebar-featured-post .featured-content .widget-wrap article .entry-meta a, {
+	color: #FFF;
+	&:hover {
+		color: #F1A069;
+	}
+}
+
+@media only screen and (max-width: 1200px) {
+}
+@media only screen and (max-width: 800px) {
+}
+@media only screen and (max-width: 600px) {
+}
+
+

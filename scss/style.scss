@@ -1,0 +1,150 @@
+/******** Color Variables ********/
+
+$orange : #F1A069;
+$dark-blue : #000455;
+$light-blue : #0AD6EF;
+$sea-blue: #0BB4C9;
+
+$light-blue: $sea-blue;
+
+$dark-gray: #4A4A4A;
+$super-light-gray: #f5f5f5;
+$light-gray: #EDEDEE;
+$medium-gray: #9B9B9B;
+$white: #FFF;
+
+$page-content-max-width: 900px;
+
+
+$utopia-bold-headline: 'Utopia W03 Bold Sbh It';
+$utopia-bold-caption: 'Utopia W03 Bold Cp It';
+$utopia-bold-talic: 'Utopia W03 Bold Dsp It';
+$utopia-headline: $utopia-bold-caption;
+$utopia: $utopia-bold-caption;
+$trade-gothic: 'TradeGothicW01-BoldCn20_675334';
+
+
+$border-radius: 0px;
+$box-shadow: 0px 0px 0px;
+
+
+// Genesis Base Styles
+@import "genesis.scss";
+
+// Partials
+@import "partials/nav.scss";
+@import "partials/header.scss";
+@import "partials/modal.scss";
+@import "partials/posts.scss";
+@import "partials/first-post.scss";
+@import "partials/email-capture-bar.scss";
+@import "partials/threesixty.scss";
+@import "partials/swag.scss";
+@import "partials/author-box.scss";
+@import "partials/layout-and-responsiveness.scss";
+@import "partials/search-and-archive.scss";
+@import "partials/load-more.scss";
+@import "partials/embedly-custom.scss";
+@import "partials/pagination.scss";
+
+@import "blog-page.scss";
+@import "single-post.scss";
+@import "page-template-about.scss";
+@import "contributors.scss";
+@import "support-us.scss";
+
+.site-inner {
+	margin:0;
+	max-width: 100%;
+}
+
+.content-sidebar-wrap {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.content {
+	display: block;
+	order: 1;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 20px;
+}
+
+.sidebar-primary {
+	display: block;
+	order:0;
+	width: 100%;
+}
+
+#sidebar-email-capture {
+	display: block;
+	order: 2;
+	width: 100%;
+}
+
+#sidebar-ThreeSixty-blog {
+	display: block;
+	order: 3;
+}
+
+#sidebar-swag {
+	display: block;
+	order: 4;
+	width: 100%;
+}
+
+
+/* Main Article Styles */
+article.teaser {
+	border-radius: $border-radius;
+	box-shadow: $box-shadow;
+}
+
+
+
+
+
+
+/* Masonry Test Styles */
+.brick {
+/*	float: left;*/
+	width: 30% !important;
+	height: auto;
+	margin: 20px !important;
+}
+
+#container {
+	display: block;
+	width: 100% !important;
+	margin: auto;
+	margin-bottom: 20px;
+	/*height: 100% !important;*/
+}
+
+body {
+	height: 100% !important;
+}
+
+html {
+	height: 100% !important;
+}
+
+
+
+/*
+Jetpack Sharing
+---------------------------------------------------------------------------------------------------- */
+
+.a2a_kit {
+	top: 14.7% !important;
+	left: calc(50% - 400px) !important;
+}
+
+body.home .a2a_kit, body.search .a2a_kit, body.page .a2a_kit, body.archive .a2a_kit {
+	display: none;
+}
+
+
+
