@@ -956,56 +956,56 @@ add_filter( 'genesis_pre_get_image', 'remove_featured_image_archives', 10, 3 );
 
 
 
-// Remove Genesis Author Box and load our own
-remove_action( 'genesis_after_post', 'genesis_do_author_box_single' );
-add_action( 'genesis_after_post', 'be_author_box' );
+// // Remove Genesis Author Box and load our own
+// remove_action( 'genesis_after_post', 'genesis_do_author_box_single' );
+// add_action( 'genesis_after_post', 'be_author_box' );
 
-/**
- * Load Author Boxes
- *
- * @author Bill Erickson
- * @link http://www.billerickson.net/wordpress-post-multiple-authors/
- */
-function be_author_box() {
+// /**
+//  * Load Author Boxes
+//  *
+//  * @author Bill Erickson
+//  * @link http://www.billerickson.net/wordpress-post-multiple-authors/
+//  */
+// function be_author_box() {
 
-	if( !is_single() )
-		return;
+// 	if( !is_single() )
+// 		return;
 
-	if( function_exists( 'get_coauthors' ) ) {
+// 	if( function_exists( 'get_coauthors' ) ) {
 		
-		$authors = get_coauthors();
-		foreach( $authors as $author )
-			be_do_author_box( $author->data->ID );
+// 		$authors = get_coauthors();
+// 		foreach( $authors as $author )
+// 			be_do_author_box( $author->data->ID );
 			
-	} else {
-		be_do_author_box( get_the_author_ID() );	
-	}
-}
+// 	} else {
+// 		be_do_author_box( get_the_author_ID() );	
+// 	}
+// }
 
-/**
- * Display Author Box
- * Modified from Genesis to use an ID
- *
- * @author Bill Erickson
- * @link http://www.billerickson.net/wordpress-post-multiple-authors/
- */
-function be_do_author_box( $id = false ) {
+// /**
+//  * Display Author Box
+//  * Modified from Genesis to use an ID
+//  *
+//  * @author Bill Erickson
+//  * @link http://www.billerickson.net/wordpress-post-multiple-authors/
+//  */
+// function be_do_author_box( $id = false ) {
 
-	if( ! $id ) 
-		return;
+// 	if( ! $id ) 
+// 		return;
 		
-	$authordata    = get_userdata( $id );
-	$gravatar_size = apply_filters( 'genesis_author_box_gravatar_size', 70, $context );
-	$gravatar      = get_avatar( get_the_author_meta( 'email', $id ), $gravatar_size );
-	$title         = apply_filters( 'genesis_author_box_title', sprintf( '<strong>%s %s</strong>', __( 'About', 'genesis' ), get_the_author_meta( 'display_name', $id ) ), $context );
-	$description   = wpautop( get_the_author_meta( 'description', $id ) );
+// 	$authordata    = get_userdata( $id );
+// 	$gravatar_size = apply_filters( 'genesis_author_box_gravatar_size', 70, $context );
+// 	$gravatar      = get_avatar( get_the_author_meta( 'email', $id ), $gravatar_size );
+// 	$title         = apply_filters( 'genesis_author_box_title', sprintf( '<strong>%s %s</strong>', __( 'About', 'genesis' ), get_the_author_meta( 'display_name', $id ) ), $context );
+// 	$description   = wpautop( get_the_author_meta( 'description', $id ) );
 
-	/** The author box markup, contextual */
-	$pattern = $context == 'single' ? '<div class="author-box"><div>%s %s<br />%s</div></div><!-- end .authorbox-->' : '<div class="author-box">%s<h1>%s</h1><div>%s</div></div><!-- end .authorbox-->';
+// 	/** The author box markup, contextual */
+// 	$pattern = $context == 'single' ? '<div class="author-box"><div>%s %s<br />%s</div></div><!-- end .authorbox-->' : '<div class="author-box">%s<h1>%s</h1><div>%s</div></div><!-- end .authorbox-->';
 
-	echo apply_filters( 'genesis_author_box', sprintf( $pattern, $gravatar, $title, $description ), $context, $pattern, $gravatar, $title, $description );
+// 	echo apply_filters( 'genesis_author_box', sprintf( $pattern, $gravatar, $title, $description ), $context, $pattern, $gravatar, $title, $description );
 	
 
-}
+// }
 
 
