@@ -2084,7 +2084,8 @@ body.single .userContent {
   border-radius: 2px !important;
   border-color: transparent !important;
   height: 55px !important;
-  font-family: "Avenir Next Cyr W00 Regular"; }
+  font-family: "Avenir Next Cyr W00 Regular";
+  padding-left: 20px; }
 
 #email-capture form input::-moz-placeholder {
   color: #999;
@@ -2166,7 +2167,8 @@ body.single .userContent {
   border-radius: 0px;
   box-shadow: 0px 0px 0px; }
 
-div.wp_rss_retriever_container p:last-of-type {
+div.wp_rss_retriever_container p:nth-last-of-type(2),
+div.wp_rss_retriever_container p:nth-last-of-type(1) {
   display: none !important; }
 
 a.wp_rss_retriever_readmore {
