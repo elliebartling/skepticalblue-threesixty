@@ -207,3 +207,11 @@ body.single p.entry-meta {
 body.single .userContent {
 	order: 2;
 }
+
+body.single a {
+	color: $sea-blue;
+	&:hover {
+		color: $orange;
+	}
+}
+

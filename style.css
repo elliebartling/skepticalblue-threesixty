@@ -2002,6 +2002,11 @@ body.single p.entry-meta {
 body.single .userContent {
   order: 2; }
 
+body.single a {
+  color: #0BB4C9; }
+  body.single a:hover {
+    color: #F1A069; }
+
 /* Trying this a different way */
 .content article.feature {
   display: none; }
