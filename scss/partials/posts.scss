@@ -165,7 +165,7 @@ $meta-background-color: #0AD6EF;
 span.entry-tags a {
 	background-color: $meta-background-color;
 	padding: 5px 15px;
-	color: #FFF;
+	color: #FFF !important;
 	font-weight: normal;
 	display: inline-block;
 	margin-top: 10px;
