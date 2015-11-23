@@ -579,7 +579,8 @@ function editors() {
 	global $wpdb;
 	$args = array();
 	$args['fields'] = array( 'ID', 'display_name' );
-	$args['role'] = 'editor';
+	$args['meta_key'] = 'editor';
+	$args['meta_value'] = 'yes';
 	$editors= get_users($args);
 
 	echo '<div id="editors-box-wrapper">';
@@ -635,11 +636,11 @@ function editors() {
 			echo '"><i class="fa fa-laptop"></i></a></li>';
 		}
 
-		// if ( get_the_author_meta( 'email', $editor->ID ) != '' ) {
-		// 	echo '<li><a href="mailto:';
-		// 	echo get_the_author_meta( 'email', $editor->ID ); 
-		// 	echo '"><i class="fa fa-envelope-o"></i></a></li>';
-		// }
+		if ( get_the_author_meta( 'public_email', $editor->ID ) != '' ) {
+			echo '<li><a href="mailto:';
+			echo get_the_author_meta( 'public_email', $editor->ID ); 
+			echo '"><i class="fa fa-envelope-o"></i></a></li>';
+		}
 
 		echo '</ul></div>';
 		echo "</div>";
@@ -745,6 +746,7 @@ function sb_modify_user_contact_methods( $user_contact ){
  /* Add user contact methods */
  $user_contact['twitter'] = __( 'Twitter Handle (no @)' );
  $user_contact['facebook'] = __( 'Facebook URL' );
+ $user_contact['public_email'] = __( 'Public Email' );
 
  /* Remove user contact methods */
  unset($user_contact['aim']);
@@ -803,6 +805,14 @@ function sb_show_extra_profile_fields( $user ) { ?>
 			</td>
 		</tr>
 		<tr>
+			<th><label for="contributor">Editor?</label></th>
+
+			<td>
+				<input type="checkbox" name="editor" id=" editor " value="yes" <?php if (esc_attr( get_the_author_meta( "editor", $user->ID )) == "yes") echo "checked"; ?> /><span class="description"><?php _e("Check box if user should be included under Senior Editors."); ?></span><br />
+
+			</td>
+		</tr>
+		<tr>
 			<th><label for="contributor">Contributor?</label></th>
 
 			<td>
@@ -828,6 +838,7 @@ function sb_save_extra_profile_fields( $user_id ) {
 	update_usermeta( $user_id, 'special_thanks', $_POST['special_thanks'] );
 	update_usermeta( $user_id, 'special_thanks_reason', $_POST['special_thanks_reason'] );
 	update_usermeta( $user_id, 'contributor', $_POST['contributor'] );
+	update_usermeta( $user_id, 'editor', $_POST['editor'] );
 }
 
 
@@ -894,8 +905,8 @@ function sb_alt_author_box() {
 				 <li><a href="<?php echo get_the_author_meta( 'github' ); ?>"><i class="fa fa-github"></i></a></li>
 				 <?php endif; ?>
 				 
-				 <?php if ( get_the_author_meta( 'user_email' ) != '' ): ?>
-				 <li><a href="mailto:<?php echo get_the_author_meta( 'user_email' ); ?>"><i class="fa fa-envelope-o"></i></a></li>
+				 <?php if ( get_the_author_meta( 'public_email' ) != '' ): ?>
+				 <li><a href="mailto:<?php echo get_the_author_meta( 'public_email' ); ?>"><i class="fa fa-envelope-o"></i></a></li>
 				 <?php endif; ?>
 				 
 				 <?php if ( get_the_author_meta( 'user_url' ) != '' ): ?>
