@@ -1,62 +1,62 @@
 /******** Color Variables ********/
 /*
-	Theme Name: SkepticalBlue
-	Description: Child theme of Genesis, by StudioPress.
-	Author: Ellie Marie Bartling
-	Author URI: 
+  Theme Name: SkepticalBlue
+  Description: Child theme of Genesis, by StudioPress.
+  Author: Ellie Marie Bartling
+  Author URI: 
 
-	Template: genesis
+  Template: genesis
 */
 /* # Table of Contents
 - Imports
 - HTML5 Reset
-	- Baseline Normalize
-	- Box Sizing
-	- Float Clearing
+  - Baseline Normalize
+  - Box Sizing
+  - Float Clearing
 - Defaults
-	- Typographical Elements
-	- Headings
-	- Objects
-	- Gallery
-	- Forms
-	- Tables
-	- Screen Reader Text
+  - Typographical Elements
+  - Headings
+  - Objects
+  - Gallery
+  - Forms
+  - Tables
+  - Screen Reader Text
 - Structure and Layout
-	- Site Containers
-	- Column Widths and Positions
-	- Column Classes
+  - Site Containers
+  - Column Widths and Positions
+  - Column Classes
 - Common Classes
-	- Avatar
-	- Genesis
-	- Search Form
-	- Titles
-	- WordPress
+  - Avatar
+  - Genesis
+  - Search Form
+  - Titles
+  - WordPress
 - Widgets
-	- Featured Content
+  - Featured Content
 - Plugins
-	- Genesis eNews Extended
-	- Jetpack
+  - Genesis eNews Extended
+  - Jetpack
 - Site Header
-	- Title Area
-	- Widget Area
+  - Title Area
+  - Widget Area
 - Site Navigation
-	- Accessible Menu
-	- Site Header Navigation
-	- Primary Navigation
-	- Secondary Navigation
-	- Skip Links
+  - Accessible Menu
+  - Site Header Navigation
+  - Primary Navigation
+  - Secondary Navigation
+  - Skip Links
 - Content Area
-	- Entries
-	- Entry Meta
-	- Pagination
-	- Comments
+  - Entries
+  - Entry Meta
+  - Pagination
+  - Comments
 - Sidebars
 - Site Footer
 - Media Queries
-	- Retina Display
-	- Max-width: 1200px
-	- Max-width: 960px
-	- Max-width: 800px
+  - Retina Display
+  - Max-width: 1200px
+  - Max-width: 960px
+  - Max-width: 800px
 - Print Styles
 */
 /* # Imports
@@ -1664,7 +1664,8 @@ nav.mm-menu {
   padding-top: 40px; }
 
 #header {
-  padding: 10px 10px; }
+  padding: 0px 10px;
+  top: 10px !important; }
 
 a.mm-title {
   display: none; }
@@ -1715,7 +1716,7 @@ li.menu-item:hover {
 
 header .wrap {
   display: flex;
-  flex-flow: row wrap; }
+  flex-flow: row; }
 
 .title-area, .header-widget-area, .header-left.widget-area {
   display: block; }
@@ -1725,7 +1726,8 @@ header .wrap {
 
 .title-area {
   order: 1;
-  /*flex-grow:2;*/ }
+  flex-grow: 2;
+  margin-right: 50px; }
 
 .header-widget-area {
   order: 2; }
@@ -1744,16 +1746,24 @@ button#support-us-button {
     display: none; }
 
   .widget-area.header-widget-area {
-    width: 130px; }
+    width: auto !important; }
 
   .title-area {
-    width: 420px; } }
-@media only screen and (max-width: 650px) {
+    width: 100% !important;
+    margin: auto !important; }
+
+  .header-left.widget-area {
+    display: none; } }
+@media only screen and (max-width: 590px) {
   h1.site-title {
     display: none; }
 
-  .title-area {
-    width: 90px; } }
+  #title-img {
+    margin: auto;
+    display: inline-block; }
+
+  .header-left.widget-area {
+    width: auto; } }
 body.modal-open .site-container, body.modal-open #header {
   -webkit-filter: blur(7px);
   -moz-filter: blur(15px);
@@ -2062,6 +2072,14 @@ body.single a {
   #sidebar-featured-post .featured-content .widget-wrap article .entry-meta a:hover {
     color: #F1A069; }
 
+@media only screen and (max-width: 600px) {
+  #sidebar-featured-post .featured-content .widget-wrap article .entry-header {
+    color: #FFF;
+    position: relative;
+    top: 5%;
+    left: 5%;
+    padding-right: 5%;
+    max-width: 600px; } }
 #email-capture {
   width: 100%;
   height: 300px;
@@ -2173,7 +2191,6 @@ body.single a {
   border-radius: 0px;
   box-shadow: 0px 0px 0px; }
 
-div.wp_rss_retriever_container p:nth-last-of-type(2),
 div.wp_rss_retriever_container p:nth-last-of-type(1) {
   display: none !important; }
 
@@ -2257,8 +2274,8 @@ p.content-all {
 /* Outer Container Styling */
 #swag-container .wp_rss_retriever_list ul {
   /*display: flex;*/
-  /*	flex-flow: row wrap;
-  	justify-content: space-between;*/
+  /*  flex-flow: row wrap;
+    justify-content: space-between;*/
   width: 100% !important;
   float: none !important;
   margin: auto; }
@@ -2395,8 +2412,8 @@ body.single #author-box-wrapper .author-box {
   background-color: #f5f5f5; }
 
 /*body.single #author-box-wrapper .author-box .contact-links {
-	display: flex;
-	flow: row wrap;
+  display: flex;
+  flow: row wrap;
 }*/
 body.single #author-box-wrapper ul.social-links {
   display: block;
@@ -2466,7 +2483,7 @@ main.content {
 li.wp_rss_retriever_item {
   min-width: 284px; }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1100px) {
   li.wp_rss_retriever_item {
     width: 48% !important; }
 
@@ -2494,13 +2511,24 @@ li.wp_rss_retriever_item {
   article:nth-of-type(7) {
     display: none; } }
 /* Swag Box */
-@media only screen and (max-width: 800px) {
+/*#sidebar-swag li {
+  position: none !important;
+}*/
+@media only screen and (max-width: 1100px) {
   #sidebar-swag .wp_rss_retriever_item:nth-of-type(3) {
     display: none; }
 
+  #sidebar-swag li {
+    position: relative !important;
+    left: 0 !important; }
+
   /*#sidebar-swag .wp_rss_retriever_item {
-  	margin-bottom: 40px !important;
+    margin-bottom: 40px !important;
   }*/ }
+@media only screen and (max-width: 1100px) {
+  #sidebar-swag .wp_rss_retriever_item:nth-of-type(3),
+  #sidebar-swag .wp_rss_retriever_item:nth-of-type(2) {
+    display: none; } }
 /* Author Archive Page */
 @media only screen and (max-width: 1400px) {
   body.archive article.brick,
@@ -2556,6 +2584,10 @@ body#cards {
 .card.article {
   background-color: red !important; }
 
+/*.embedly-card:before {
+  content: "whatsup";
+  display: none;
+}*/
 .pagination {
   text-align: center; }
 
@@ -2925,7 +2957,7 @@ article.teaser {
 
 /* Masonry Test Styles */
 .brick {
-  /*	float: left;*/
+  /*  float: left;*/
   width: 30% !important;
   height: auto;
   margin: 20px !important; }
