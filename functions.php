@@ -488,7 +488,7 @@ function child_get_email_sidebar() {
 
 
 //* Display author box on single posts
-add_filter( 'get_the_author_genesis_author_box_single', '__return_true' );
+add_filter( 'get_the_author_genesis_author_box_single', '__return_false' );
 
 //* Modify the size of the Gravatar in the author box
 add_filter( 'genesis_author_box_gravatar_size', 'author_box_gravatar_size' );
@@ -942,8 +942,8 @@ function sb_alt_author_box_archive() {
 
 remove_action( 'genesis_after_entry', 'genesis_do_author_box_single', 8 );
 remove_action( 'genesis_before_loop', 'genesis_do_author_box_archive' );
-add_action( 'genesis_after_content', 'sb_alt_author_box_single' ); //change hook for position
-add_action('genesis_before_content', 'sb_alt_author_box_archive');
+// add_action( 'genesis_after_content', 'sb_alt_author_box_single' ); //change hook for position
+// add_action('genesis_before_content', 'sb_alt_author_box_archive');
 
 
 
