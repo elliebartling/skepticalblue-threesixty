@@ -72,7 +72,14 @@ global $post;
 			$time = get_the_date('F j, Y');
 			$title_length = strlen(get_the_title());
 			$content = get_the_content();
-			$snippet = substr($content, 0, strlen($content) - $title_length);
+			$format_changed = "2015-11-23";
+
+			if ( get_the_date('Y-m-d') > $format_changed ) {
+				$snippet = substr($content, 0, strlen($content) - $title_length);
+			}
+			else {
+				$snippet = substr($content, 0, strlen($content) - ($title_length+2));
+			}
  
 			echo '<article class="post type-post status-publish format-standard entry brick masonry-brick teaser one-half">';
 				echo '<header class="entry-header"></header>';
