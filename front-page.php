@@ -78,7 +78,7 @@ global $post;
 				$snippet = substr($content, 0, strlen($content) - $title_length);
 			}
 			else {
-				$snippet = substr($content, 0, strlen($content) - ($title_length+2));
+				$snippet = substr($content, 0, strlen($content) - ($title_length+3));
 			}
  
 			echo '<article class="post type-post status-publish format-standard entry brick masonry-brick teaser one-half">';
