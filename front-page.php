@@ -70,6 +70,9 @@ global $post;
 	if ( have_posts() ) : 
 		while ( have_posts() ) : the_post(); 
 			$time = get_the_date('F j, Y');
+			$title_length = strlen(get_the_title());
+			$content = get_the_content();
+			$snippet = substr($content, 0, strlen($content) - $title_length);
  
 			echo '<article class="post type-post status-publish format-standard entry brick masonry-brick teaser one-half">';
 				echo '<header class="entry-header"></header>';
@@ -79,7 +82,7 @@ global $post;
 				// echo ' by ';
 				// echo '<span class="entry-author" itemtype="http://schema.org/Person">' . get_the_author() . '</span>';
 				echo '<a href="' . get_permalink() .'" title="' . the_title_attribute( 'echo=0' ) . '">'; // Original Grid
-				echo '<p>' . the_excerpt() . '</p>';
+				echo '<p>' . $snippet . '</p>';
 				echo '<p> <a class="more-link" href="' . get_permalink() .'">Read more »</a></p>';
 				echo '</a>';
 				echo '</div>';
